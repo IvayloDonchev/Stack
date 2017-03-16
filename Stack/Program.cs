@@ -44,6 +44,7 @@ namespace Stack
                 Console.WriteLine("\n"+e.Message);
             }
 
+
             Console.ReadKey();
         }
     }
