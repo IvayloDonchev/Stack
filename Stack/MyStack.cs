@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Stack
 {
-    public class MyStack<T> : IEnumerable<T>
+    public class MyStack<T> : IEnumerable<T>, ICloneable
     {
         private class Node
         {
@@ -38,12 +38,20 @@ namespace Stack
             throw new InvalidOperationException("Stack empty...");
         }
 
-        internal List<T> ToList()
+        public List<T> ToList()
         {
             List<T> list = new List<T>();
             for (var el = sp; el != null; el = el.next)
                 list.Add(el.key);
             return list;
+        }
+
+        public Stack<T> ToStack()
+        {
+            Stack<T> stack = new Stack<T>();
+            for (var el = sp; el != null; el = el.next)
+                stack.Push(el.key);
+            return stack;
         }
 
         public IEnumerator<T> GetEnumerator()
@@ -56,6 +64,14 @@ namespace Stack
         {
             for (var x = sp; x != null; x = x.next)
                 yield return x.key;
+        }
+
+        public object Clone()
+        {
+            MyStack<T> copy = new MyStack<T>();
+            foreach (var x in this)
+                copy.Push(x);
+            return (object) copy;
         }
     }
 }

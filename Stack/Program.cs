@@ -63,6 +63,16 @@ namespace Stack
                 Console.Write(x.ToString() + " ");
             Console.WriteLine();
 
+            MyStack<string> secondStack = (MyStack<string>) myStringStack.Clone();
+            foreach(var x in secondStack)
+                Console.Write(x.ToString() + " ");
+            Console.WriteLine();
+
+            Stack<string> thirdStack = myStringStack.ToStack();
+            foreach (var x in thirdStack)
+                Console.Write(x.ToString() + " ");
+            Console.WriteLine();
+
             Console.ReadKey();
         }
     }
