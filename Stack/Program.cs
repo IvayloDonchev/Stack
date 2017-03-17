@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Stack
 {
@@ -72,7 +73,7 @@ namespace Stack
             foreach (var x in thirdStack)
                 Console.Write(x.ToString() + " ");
             Console.WriteLine();
-            
+
             Console.ReadKey();
         }
     }
