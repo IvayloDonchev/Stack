@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Stack
 {
-    public class MyStack<T> : IEnumerable<T>, ICloneable
+        public class MyStack<T> : IEnumerable<T>, ICloneable
     {
         private class Node
         {

@@ -72,7 +72,7 @@ namespace Stack
             foreach (var x in thirdStack)
                 Console.Write(x.ToString() + " ");
             Console.WriteLine();
-
+            
             Console.ReadKey();
         }
     }
