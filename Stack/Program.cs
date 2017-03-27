@@ -74,6 +74,20 @@ namespace Stack
                 Console.Write(x.ToString() + " ");
             Console.WriteLine();
 
+
+            MyStack<int> intStack = new MyStack<int>();
+            for (int i = 1; i <= 10; i++)
+                intStack.Push(i);
+            try
+            {
+                for (int i = 0; i < 12; i++)
+                    Console.WriteLine(intStack[i]);
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+               // return;
+            }
             Console.ReadKey();
         }
     }

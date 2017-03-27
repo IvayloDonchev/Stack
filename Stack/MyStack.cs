@@ -74,5 +74,20 @@ namespace Stack
                 copy.Push(x);
             return (object) copy;
         }
+
+        public T this[int index]    // indexer
+        {
+            get
+            {
+                var p = sp;
+                for(int i=1; i<=index; i++)
+                {
+                    if (p == null)
+                        throw new IndexOutOfRangeException("Incorrect index!");
+                    p = p.next;
+                }
+                return p.key;
+            }
+        }
     }
 }
