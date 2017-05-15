@@ -83,7 +83,7 @@ namespace Stack
                 for (int i = 0; i < 12; i++)
                     Console.WriteLine(intStack[i]);
             }
-            catch(Exception e)
+            catch(NullReferenceException e)
             {
                 Console.WriteLine(e.Message);
                // return;

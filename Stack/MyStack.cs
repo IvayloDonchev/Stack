@@ -24,9 +24,17 @@ namespace Stack
         private Node sp;    // Stack Pointer
         public void Push(T x)
         {
-            Node p = new Node(x);
-            p.next = sp;
-            sp = p;
+            try
+            {
+                Node p = new Node(x);
+                p.next = sp;
+                sp = p;
+            }
+            catch(OutOfMemoryException e)
+            {
+                Console.WriteLine(e.Message);
+                throw;
+            }
         }
         public T Pop()
         {

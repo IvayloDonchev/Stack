@@ -13,9 +13,10 @@
       </Class>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAgAAACAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAABAICAAAAAAAAACAAAAEAAgAgAAACBA=</HashCode>
       <FileName>MyStack.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Stack.Program">
     <Position X="3" Y="0.5" Width="1.5" />
